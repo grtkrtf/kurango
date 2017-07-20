@@ -1,0 +1,143 @@
+\documentclass[12pt]{article}
+	%FORMATTING
+		\usepackage{graphicx} %op shit
+		\usepackage[margin=1in]{geometry} %Set margins
+		\usepackage{fixltx2e} %subscript
+	%LINGUISTICS-RELATED PACKAGES
+		\usepackage{qtree} %syntax trees
+		\usepackage{covington} %interlinearizations
+		\usepackage{amsmath,amsthm,amssymb} %empty set and some other shit
+		\usepackage{tipa} %ipa
+		\usepackage{float} %resizing tables
+
+	\let\oldemptyset\emptyset %Redefines the shitty empty set symbol to the old one.
+	\let\emptyset\varnothing
+
+	%stuff for handling how awful it is to use default tipa syntax
+		\newcommand{\R}{\textipa{R}} %alv tap
+		\newcommand{\N}{\textipa{N}} %eng
+		\newcommand{\OO}{\textipa{O}} %open o, DONT FORGET THE SECOND O!!!
+		\newcommand{\B}{\textipa{B}} %bilab fric voi
+		\newcommand{\G}{\textipa{G}} %velar fric voi
+		\newcommand{\W}{\textipa{V}} %velar approximant
+		\newcommand{\F}{\textipa{F}} %-voi bilab fric
+		\newcommand{\glot}{\textipa{P}}
+		%\textipa{:}
+
+		\newcommand{\0}{$\emptyset$} %Null
+		\newcommand{\D}{\scshape} %smallcaps
+
+		\newcommand{\kurango}{K\textipa{uRaNO}}
+		\newcommand{\nom}{\D{nom}}
+		\newcommand{\erg}{\D{erg}}
+		\newcommand{\abs}{\D{abs}}
+		\newcommand{\gen}{\D{gen}}
+		\newcommand{\poss}{\D{poss}}
+		\newcommand{\emo}{\D{emo}}
+		\newcommand{\cop}{\D{cop}}
+		\newcommand{\caus}{\D{caus}}
+		\newcommand{\pst}{\D{pst}}
+		\newcommand{\fut}{\D{fut}}
+		\newcommand{\negative}{\D{neg}}
+		\newcommand{\interr}{\D{interr}}
+		\newcommand{\reas}{\D{reas}}
+		\newcommand{\dirprox}{\D{dir:prox}}
+
+%--------------------------------------------------------------%
+%  EXAMPLE INTERLINEAR GLOSS, ADAPTED FROM LEV'S DISSERTATION  
+%															   
+%	\begin{example}											   
+%	\label{ex:nasalpoa}										   
+%		Ontagake. \textipa{[ontagakse]}						   
+%		\gll o= n- tag -ak -e 								   
+%		3nmS= irreal burn -perf -irreal.i 					   
+%		\glt `It will burn.' 								   
+%		\glend 												   
+%	\end{example} 											   
+%  															   
+%	%Reference examples like this: (\ref{ex:nasalpoa})         
+%--------------------------------------------------------------%
+
+%This is a test\footnote{This is not a test; it's an example of a footnote.}
+
+\begin{document}
+\title{Reduplication in \kurango}
+\maketitle
+
+	One of \kurango 's hallmarks is its reduplicative system. It has multiple reduplicative processes.
+
+	\section{Intensification}
+		 Semantically, this reduplicative process results in an intensification of the meaning of the morpheme. This more or less restricts where reduplication can or can not occur---it is common on intensifiable parts of speech like adjectives, and very rare on less-intensifiable parts of speech like verbs. The reduplicative template varies based on how many syllables\footnote{Syllable being one vowel and its onset, or one grapheme in the \emph{kuraito} orthography.} are in the stem.
+
+		\subsection{One and two-syllable stems}
+			One and two-syllable stems are copied and reduplicated entirely\footnote{Forms in these tables ignore phonological rules and represent underlying forms.}.
+				\begin{table}[H]
+				\centering
+					\begin{tabular}{ll}
+					Original Form & Reduplicated Form \\ \hline\hline
+					ga -ti -xu si & ga -titi -xu si \\
+					`I like someone.' & `I love someone.' \\ \hline
+					ga -\N a -ka si & ga -\N a -kaka si \\
+					`I am unhappy.' & `I am miserable.' \\ \hline
+					\glot a\R i {-g\OO\OO} {\R\OO} & \glot a\R i {-g\OO\OO} {\R\OO\R\OO} \\
+					`Please leave.' & `Go away!' \\ \hline
+					ni- \glot a\N a -mi si \R i? & ni- \glot a\N a -mi si \R i\R i? \\
+					`What is your name?' & `I really need to know your name.' \\
+					\hline\hline 
+					\end{tabular}
+				\caption{One-syllable stem reduplication}
+				\end{table}
+
+				\begin{table}[H]
+				\centering
+					\begin{tabular}{ll}
+					Original Form & Reduplicated Form \\ \hline\hline
+					gaku & gakugaku \\
+					`good' & `very good' \\ \hline
+					ga\N a & ga\N aga\N a \\
+					`bad' & `very bad' \\ \hline
+					\glot a\F a & \glot a\F a\glot a\F a \\
+					`Yes.' & `Of course!' \\ \hline
+					\glot i\glot i & \glot i\glot i\glot i\glot i \\
+					`No.' & `Absolutely not!' \\ \hline
+					ka\R i -su & ka\R ika\R i -su \\
+					`sleepy' & `exhausted' \\ 
+					\hline\hline 
+					\end{tabular}
+				\caption{Two-syllable stem reduplication}
+				\end{table}
+
+		\subsection{Three-syllable stems and up}
+		Stems that are three syllables or over undergo opposite-edge reduplication of two syllables. These two syllables are selected right-to-left and then prefixed.
+				\begin{table}[H]
+				\centering
+					\begin{tabular}{ll}
+					Original Form & Reduplicated Form \\ \hline\hline
+					\glot inaka\R a -su & ka\R a\glot inaka\R a -su \\
+					`boring' & `extremely boring' \\
+					\hline\hline
+					\end{tabular}
+				\caption{Three-syllable and up stem reduplication}
+				\end{table}
+
+	\section{Pluralization}
+		Pluralization is cause by opposite-edge reduplication. One syllable from the beginning of the word is suffixed to denote a plural entity.
+			\begin{table}[H]
+			\centering
+				\begin{tabular}{ll}
+				Original Form & Reduplicated Form \\ \hline\hline
+				\glot\OO\glot ati & \glot\OO\glot ati\glot\OO \\
+				`dog' & `dogs' \\ \hline
+				mi\R\OO & mi\R\OO mi \\
+				`cat' & `cats' \\ \hline
+				\F aa\B u & \F aa\B u\F a \\
+				`home' & `homes' \\ \hline
+				di & didi \\
+				`day' & `days' \\
+				\end{tabular}
+			\caption{Pluralization}
+			\end{table}
+
+
+\end{document}
+

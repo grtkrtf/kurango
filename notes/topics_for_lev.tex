@@ -1,0 +1,190 @@
+\documentclass[12pt]{article}
+	%FORMATTING
+		\usepackage{graphicx} %op shit
+		\usepackage[margin=1in]{geometry} %Set margins
+		\usepackage{fixltx2e} %subscript
+	%LINGUISTICS-RELATED PACKAGES
+		\usepackage{qtree} %syntax trees
+		\usepackage{covington} %interlinearizations
+		\usepackage{amsmath,amsthm,amssymb} %empty set and some other shit
+		\usepackage{tipa} %ipa
+
+	\let\oldemptyset\emptyset %Redefines the shitty empty set symbol to the old one.
+	\let\emptyset\varnothing
+
+	%stuff for handling how awful it is to use default tipa syntax
+		\newcommand{\R}{\textipa{R}} %alv tap
+		\newcommand{\N}{\textipa{N}} %eng
+		\newcommand{\OO}{\textipa{O}} %open o, DONT FORGET THE SECOND O!!!
+		\newcommand{\B}{\textipa{B}} %bilab fric voi
+		\newcommand{\G}{\textipa{G}} %velar fric voi
+		\newcommand{\W}{\textturnmrleg} %velar approximant
+		%\textipa{:}
+
+		\newcommand{\0}{$\emptyset$} %Null
+		\newcommand{\D}{\scshape} %smallcaps
+
+		\newcommand{\kurango}{K\textipa{uRaNO}}
+		\newcommand{\nom}{\D{nom}}
+		\newcommand{\erg}{\D{erg}}
+		\newcommand{\abs}{\D{abs}}
+		\newcommand{\gen}{\D{gen}}
+		\newcommand{\poss}{\D{poss}}
+		\newcommand{\emo}{\D{emo}}
+		\newcommand{\cop}{\D{cop}}
+		\newcommand{\caus}{\D{caus}}
+		\newcommand{\pst}{\D{pst}}
+		\newcommand{\fut}{\D{fut}}
+
+%--------------------------------------------------------------%
+%  EXAMPLE INTERLINEAR GLOSS, ADAPTED FROM LEV'S DISSERTATION  
+%															   
+%	\begin{example}											   
+%	\label{ex:nasalpoa}										   
+%		Ontagake. \textipa{[ontagakse]}						   
+%		\gll o= n- tag -ak -e 								   
+%		3nmS= irreal burn -perf -irreal.i 					   
+%		\glt `It will burn.' 								   
+%		\glend 												   
+%	\end{example} 											   
+%  															   
+%	%Reference examples like this: (\ref{ex:nasalpoa})         
+%--------------------------------------------------------------%
+
+%This is a test\footnote{This is not a test; it's an example of a footnote.}
+
+\begin{document}
+\title{questions for lev}
+\maketitle
+\begin{enumerate}
+	
+	\item Case assignment\\\kurango 's case assignment system is what I think is called ``Fluid-S''---S patterns with A and O depending on volitionality of the agent.
+		\begin{example}
+		\label{ex:case_erg}
+			Nakari. [naka\R i]
+			\gll na- \0- ka\R i
+			{\D{1}}- {\D{erg}}- sleep
+			\glt `I sleep.' (by my own volition.)
+			\glend
+		\end{example}
+
+		\begin{example}
+		\label{ex:case_abs}
+			Nakukari. [nakuka\R i]
+			\gll na- ku- ka\R i
+			{\D{1}}- {\D{nom}}- sleep
+			\glt `I sleep.' (no entailment about my volition.)
+			\glend
+		\end{example}
+
+		\begin{example}
+			\label{ex:nonapplicative}
+				Nimotivagaana. \textipa{[nimOtiBaga:na]}
+				\gll ni- {\0-} m\OO ti -\B a -ga\textipa{:} -na -\0
+				2- {\erg-} die -{\D{caus}} -{\D{fut}} -1 -\abs
+				\glt `You are going to kill me.' (More on causatives later...)
+				\glend
+			\end{example}
+
+	In transitive sentences, ERG and ABS case are used. NOM and ABS case are marked the same, but one marks S\textsubscript{o} and one marks O. Should I even call it NOM in (\ref{ex:case_erg}) or should I just call it ABS?
+
+	If you negate a Fluid-S intransitive sentence, are you negating the volition (or lack thereof) or are you negating the action of the verb? How would you negate the other one?
+
+	\item Case assignment in ditransitives\\In a ditransitive sentence, what is the case of the verb's second argument? Is it GEN? OBL? DAT? What are GEN, OBL, and DAT? Are there other kinds of case?
+		\begin{example}
+			\label{ex:case_ditrans}
+				Nawivinu namiromiku nungu. \textipa{[na\W i\B inu nami\R\OO miku nu\N u]}
+				\gll na- \0- \W i\B i -nu {-\0} na- {mi\R\OO} -mi -ku nu -\N u
+				1- \erg- give -3 {-\abs} 1- cat {-\poss} {-\abs} 3 -\gen
+				%is case assignment in this sentence OK?
+				\glt `I give him/her my cat.'
+				\glend
+		\end{example}
+
+	\item Causatives\\Below is an example of how causatives work in \kurango . Are causatives usually marked on the verb? If they are, is my form typologically acceptable?
+
+			\begin{example}
+			\label{ex:noncausative}
+				Nakumotigaa. \textipa{[nakumOtiga:]}
+				\gll na- ku- m\OO ti -ga\textipa{:}
+				{\D{1}}- {\D{nom}}- die -{\D{fut}}
+				\glt `I am going to die.'
+				\glend
+			\end{example}
+
+			\begin{example}
+			\label{ex:causative}
+				Namotivagaana. \textipa{[namOtiBaga:na]}
+				\gll na- {\0-} m\OO ti -\B a -ga\textipa{:} -na -\0
+				{\D{1}} {\D{erg}}- die -{\D{caus}} -{\D{fut}} -1 -\abs
+				\glt `I am going to kill myself.' (lit: `I am going to make myself die.')
+				\glend
+			\end{example}
+
+	Also, how do causatives work in a Fluid-S system? Is the case assignment on O (previously ``underlyingly?'' S) determined by volition, or does it follow standard rules for transitive sentence case assignment?
+
+			\begin{example}											   
+				\label{ex:fluids_erg}										   
+						Gangaka nasivamonu. \textipa{[gaNaka nasiBamOnu]}
+						\gll ga -\N a -ka na- \0- si -\B a {-m\OO} -nu -\0						   
+			   			{\emo} -{\D{neg}} -{\D{emo:happy}} 1- {\erg-} {\cop} {-\caus} {-\pst} 3 -\abs
+						\glt `I made him/her unhappy.' (It is my fault that he/she was unhappy.) 								   
+						\glend 												   
+				\end{example}
+
+				\begin{example}
+				\label{ex:fluids_abs}
+						Gangaka nakusivamonu. \textipa{[gaNaka nakusiBamOnu]}
+						\gll ga -\N a -ka na- ku- si -\B a {-m\OO} -nu -\0				   
+			   			{\emo} -{\D{neg}} -{\D{emo:happy}} 1- {\nom}- {\cop} {-\caus} {-\pst} 3 -\abs
+						\glt `I made him/her unhappy.' (No implication that it was my fault.)
+						\glend
+				\end{example}
+
+	What about the causative morpheme without the introduction of another argument? Do languages do that? Is below typologically acceptable?
+
+		\begin{example}
+		 	\label{ex:noncausative}
+		 		Nakumotivagaa. \textipa{[nakumOtiBaga:]}
+		 		\gll na- ku- m\OO ti -\B a -ga\textipa{:}
+		 		1- {\nom-} die {-\caus} {-\fut}
+		 		\glt `I am going to be killed' (lit: I am going to be made dead) %Is this future perfect or just future? wtf
+		 		\glend
+		 \end{example}
+
+	How do you negate the causative versus negating the verb?
+
+	\item Applicatives\\How are applicatives usually marked? A suffix on the introduced argument or a suffix on the verb?
+
+			\begin{example}
+			\label{ex:nonapplicative}
+				Nimotivagaana. \textipa{[nimOtiBaga:na]}
+				\gll ni- {\0-} m\OO ti -\B a -ga\textipa{:} -na -\0
+				2- {\erg-} die -{\D{caus}} -{\D{fut}} -1 -\abs
+				\glt `You are going to kill me.'
+				\glend
+			\end{example}
+
+			\begin{example}
+			\label{ex:applicative}
+				Nimotivagaana soodongu'uti. \textipa{[nigu naku mOtiBaga: sO:dONuPuti]}
+				\gll ni- {\0-} m\OO ti -\B a -ga\textipa{:} -na -\0 {s\OO\textipa{:}d\OO} -\N u -\textipa{P}uti
+				1- {\erg}- kill -{\caus} -{\fut} -1 -{\abs} sword {-\gen} -{\D{appl}}
+				\glt `You are going to kill me with a sword.' (lit: `You made me die with a sword.')
+				\glend
+			\end{example}
+
+	negation in applicatives\\applicatives without another argument
+
+	\item Antipassives\\What are they and how could I implement them?
+
+	\item Directionals\\Let's discuss directionals and how I could use them instead of prepositions (like in the sentence i am going to the store, the directional would be marked on `store')
+
+	im going to jump versus im going-dir:prox jump 'im going to go jump'
+	im going to jump versus im going to jump store-dir:prox `im going to jump to the store' (Maybe use an applicative here on store as well as it is an introduced argument?)
+
+	\item How do you draw origo graphs?
+
+
+\end{enumerate}
+\end{document}

@@ -1,0 +1,129 @@
+\documentclass[12pt]{article}
+	%FORMATTING
+		\usepackage{graphicx} %op shit
+		\usepackage[margin=1in]{geometry} %Set margins
+		\usepackage{fixltx2e} %subscript
+	%LINGUISTICS-RELATED PACKAGES
+		\usepackage{qtree} %syntax trees
+		\usepackage{covington} %interlinearizations
+		\usepackage{amsmath,amsthm,amssymb} %empty set and some other shit
+		\usepackage{tipa} %ipa
+
+	\let\oldemptyset\emptyset %Redefines the shitty empty set symbol to the old one.
+	\let\emptyset\varnothing
+
+	%stuff for handling how awful it is to use default tipa syntax
+		\newcommand{\R}{\textipa{R}} %alv tap
+		\newcommand{\N}{\textipa{N}} %eng
+		\newcommand{\OO}{\textipa{O}} %open o, DONT FORGET THE SECOND O!!!
+		\newcommand{\B}{\textipa{B}} %bilab fric voi
+		\newcommand{\G}{\textipa{G}} %velar fric voi
+		\newcommand{\W}{\textipa{V}} %velar approximant
+		\newcommand{\F}{\textipa{F}} %-voi bilab fric
+		\newcommand{\glot}{\textipa{P}}
+		%\textipa{:}
+
+		\newcommand{\0}{$\emptyset$} %Null
+		\newcommand{\D}{\scshape} %smallcaps
+
+		\newcommand{\kurango}{K\textipa{uRaNO}}
+		\newcommand{\nom}{\D{nom}}
+		\newcommand{\erg}{\D{erg}}
+		\newcommand{\abs}{\D{abs}}
+		\newcommand{\gen}{\D{gen}}
+		\newcommand{\poss}{\D{poss}}
+		\newcommand{\emo}{\D{emo}}
+		\newcommand{\cop}{\D{cop}}
+		\newcommand{\caus}{\D{caus}}
+		\newcommand{\pst}{\D{pst}}
+		\newcommand{\fut}{\D{fut}}
+		\newcommand{\negative}{\D{neg}}
+		\newcommand{\interr}{\D{interr}}
+		\newcommand{\reas}{\D{reas}}
+		\newcommand{\dirprox}{\D{dir:prox}}
+		\newcommand{\pl}{\D{pl}}
+		\newcommand{\redupl}{\D{redup.pl}}
+
+%--------------------------------------------------------------%
+%  EXAMPLE INTERLINEAR GLOSS, ADAPTED FROM LEV'S DISSERTATION  
+%															   
+%	\begin{example}											   
+%	\label{ex:nasalpoa}										   
+%		Ontagake. \textipa{[ontagakse]}						   
+%		\gll o= n- tag -ak -e 								   
+%		3nmS= irreal burn -perf -irreal.i 					   
+%		\glt `It will burn.' 								   
+%		\glend 												   
+%	\end{example} 											   
+%  															   
+%	%Reference examples like this: (\ref{ex:nasalpoa})         
+%--------------------------------------------------------------%
+
+%This is a test\footnote{This is not a test; it's an example of a footnote.}
+
+\begin{document}
+\title{Experimental {\kurango} forms: implement later}
+\maketitle
+
+\section{Clitic:REAS \emph{\textipa{VOOka}}}
+	\begin{example}
+	\label{ex:reas}
+		Na'arimo faavugoo kariwooka [\textipa{naPaRi FaaBugOO kaRiVOOka}]
+		\gll na- \textipa{P}a\R i {m\OO} {\F aa\B u} {-g\OO\OO} {ka\R i} -\W\OO\OO ka
+		1- go {-\pst} home {-\dirprox} sleep -\reas
+		\glt `I went home in order to sleep.'
+		\glend
+	\end{example}
+
+\section{V:desire \emph{\textipa{gOPi}}}
+	\begin{example}
+	\label{ex:desire}
+		Nago'i o'ati. [\textipa{nagoPi PoPati}]
+		\gll na- go\textipa{P}i \textipa{PoPati}
+		1- desire dog
+		\glt `I want a dog.'
+		\glend
+	\end{example}
+
+	\begin{example}
+	\label{ex:desire_imp}
+		Nigo'i o'ati ri? [\textipa{nigoPi PoPati Ri}]
+		\gll ni- go\textipa{P}i \textipa{PoPati} \R i
+		2- desire dog {\interr}
+		\glt `Do you want a dog?'
+		\glend
+	\end{example}
+
+\section{V:be.able.to \emph{\textipa{saRu}}}
+	\begin{example}
+	\label{ex:be.able.to}
+		Nasarunga ari favukoo, nimiromi siwooka wakoo. [\textipa{nasaRuNa PaRi FaBukOO nimiROmi siVOOka VakO}]
+		\gll na- saru -\N a \textipa{PaRi} {\F a\B u} {-k\OO\OO} ni- {mi\R\OO} -mi si -\W\OO\OO ka \W a -k\OO\OO
+		1- be.able.to {-\negative} go house {-\dirprox} 1- cat {-\poss} {\cop} {-\reas} that -\dirprox
+		\glt `I cannot go to your house, as your cat is there.'
+		\glend
+	\end{example}
+
+\section{V:order \emph{\textipa{PadaRa}}}
+	\begin{example}
+	\label{ex:order}
+		Waruumu nga'adarasu si. [\textipa{VaRuumu NaPadaRasu si}]
+		\gll \W a- \R uumu \N a- \glot ada\R a -su si
+		that- room \negative- order -v.to.adj \cop
+		\glt `That room is disorderly.'
+		\glend
+	\end{example}
+
+\section{V:select \emph{\textipa{gaaRO}}}
+
+\section{V:know \emph{\textipa{Gana}}}
+	\begin{example}
+	\label{ex:know}
+		Narhananga nutjanga'ami. [\textipa{naGanaNa nutjaNaPami}]
+		\gll na- \G ana -\N a nu- ti- \glot a\N a -\glot a -mi 
+		1- know {-\negative} 3- \pl- name {-\redupl} {-\poss}
+		\glt `I do not know their names.'
+		\glend
+	\end{example}
+\end{document}
+

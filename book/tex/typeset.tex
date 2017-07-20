@@ -1,0 +1,43 @@
+\chapter{Typesetting \kurango}
+\label{chap:typeset}
+
+{\kurango} is available for use as a set of .ttf fonts, compatable with most word processors. Because {\kurango}'s orthography is a syllabary (see \autoref{chap:ortho}), the current way it is typed is using a set of Japanese fonts (not simply one, as {\kurango} has more glyphs than standard Japanese.)
+
+The fonts were created using \url{http://www.paintfont.com/} and Adobe Photoshop CS6. I plan to create a more better-designed font using a vector program like Adobe Illustrator in the future if I have more time/skill.
+
+\section{Mapping onto Japanese font}
+	Because {\kurango} and Japanese are very different languages, the mapping of {\kurango} onto a Japanese font is not 1:1. For example, all Japanese glyphs with a nucleus of /e/ are ignored, as {\kurango} has no /e/ phoneme. However, additional phonemes like /\N, \G, \B/, etc, needed to be added into a Japanese font which does not natively include them. 
+
+	The way this was handled was through the use of two font types: ``Normal'' and ``Irregular.'' 
+
+	The ``Normal'' font includes any onset that is natively found in Japanese, with the exception of /\F/, which was substituted for Japanese /h/\footnote{An allophone of Japanese /h/ is /\F/.} (but still typed using <h>). The normal font includes the onsets /\glot, k, g, s, z, t, d, n, \F, p, b, m, \R/ and the nuclei /a, i, u, \OO/ (/\OO/ is typed using <o>).
+
+	The ``Irregular'' font includes any onset \emph{not} natively found in Japanese. This includes the onsets /x, \G, \N, \W, \B, \M/. Below is a table of how these fonts were mapped onto Japanese:
+		\begin{CJK}{UTF8}{min}
+		\begin{table}[H]
+		\centering
+		\caption{Onset mapping from Japanese to \kurango. Any form not included in the table is not included in the fonts.}
+		\label{irregular_font}
+			\begin{tabular}{c|cccccccc}\hline\hline
+				Japanese Orthography & $\emptyset$ & か/が & さ/ざ & た/だ & な & は/ぱ/ば & ま & ら \\
+				Japanese Onset & $\emptyset$ & k/g & s/z & t/d & n & h/p/b & m & r \\ \hline
+				{\kurango} ``Normal'' & \glot & k/g & s/z & t/d & n & \F/p/b & m & \R \\
+				{\kurango} ``Irregular'' & \glot & x/\G & s/z & t/d & \N & \F/\W/\B & \W & \R \\ \hline\hline
+			\end{tabular}
+		\end{table}
+		\end{CJK}
+
+	Because of this system, typing {\kurango} should feel as intuitive as typing Japanese on a Roman keyboard, with the exception of a little unavoidable rote memorization for the ``Irregular'' onsets.
+
+	\subsection{Additional contrasts}
+		\kurango's writing system also has methods for indicating borrowed words as well as indicating vowel length (see \autoref{chap:typeset}). Borrowed words are typed using Japanese \emph{katakana} instead of \emph{hiragana}. Long vowels are not as elegant: they require additional fonts.
+
+		Ultimately, this results in four Japanese fonts to one complete {\kurango} font: short vowels/normal onsets; short vowels/irregular onsets; long vowels/normal onsets; and long vowels/irregular onsets. I know, its not pretty. Hopefully I can find a better solution in the future, but this one will have to do for now.
+
+\section{Installation/Usage}
+	Since the {\kurango} fonts are simple .ttf fonts, they are installed rather painlessly. Please see documentation for installing .ttf fonts on your operating system\footnote{On Windows, you can right-click a .ttf and there is an ``Install font'' option. For OS X, ``Font Book'' (a preinstalled program) will do the job. If you're on GNU/Linux or some other UNIX OS, you know how to use your computer and reading this footnote is a waste of time.}.
+
+	The fonts are available as a .zip on my Dropbox (the same one this very .pdf is hosted on). Here's a public URL: \url{https://www.dropbox.com/s/eb0dkole8n0jlbz/dl_fonts.zip?dl=0}
+
+	\subsection{Usage in \LaTeX}
+		Currently, {\kurango} fonts are incompatible with \LaTeX. Since I love {\LaTeX} more than life itself, I'd like to get this working in the future, but it's currently on hold, as the only feasible solution I have would make it difficult to re-implement once I redo the fonts.

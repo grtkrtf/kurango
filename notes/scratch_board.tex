@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+	%FORMATTING
+		\usepackage{graphicx} %op shit
+		\usepackage[margin=1in]{geometry} %Set margins
+		\usepackage{fixltx2e} %subscript
+	%LINGUISTICS-RELATED PACKAGES
+		\usepackage{qtree} %syntax trees
+		\usepackage{covington} %interlinearizations
+		\usepackage{amsmath,amsthm,amssymb} %empty set and some other shit
+		\usepackage{tipa} %ipa
+
+	\let\oldemptyset\emptyset %Redefines the shitty empty set symbol to the old one.
+	\let\emptyset\varnothing
+
+	%stuff for handling how awful it is to use default tipa syntax
+		\newcommand{\R}{\textipa{R}} %alv tap
+		\newcommand{\N}{\textipa{N}} %eng
+		\newcommand{\OO}{\textipa{O}} %open o, DONT FORGET THE SECOND O!!!
+		\newcommand{\B}{\textipa{B}} %bilab fric voi
+		\newcommand{\G}{\textipa{G}} %velar fric voi
+		\newcommand{\W}{\textipa{V}} %velar approximant
+		\newcommand{\F}{\textipa{F}} %-voi bilab fric
+		\newcommand{\glot}{\textipa{P}}
+		%\textipa{:}
+
+		\newcommand{\0}{$\emptyset$} %Null
+		\newcommand{\D}{\scshape} %smallcaps
+
+		\newcommand{\kurango}{K\textipa{uRaNO}}
+		\newcommand{\nom}{\D{nom}}
+		\newcommand{\erg}{\D{erg}}
+		\newcommand{\abs}{\D{abs}}
+		\newcommand{\gen}{\D{gen}}
+		\newcommand{\poss}{\D{poss}}
+		\newcommand{\emo}{\D{emo}}
+		\newcommand{\cop}{\D{cop}}
+		\newcommand{\caus}{\D{caus}}
+		\newcommand{\pst}{\D{pst}}
+		\newcommand{\fut}{\D{fut}}
+		\newcommand{\negative}{\D{neg}}
+		\newcommand{\interr}{\D{interr}}
+		\newcommand{\reas}{\D{reas}}
+		\newcommand{\dirprox}{\D{dir:prox}}
+
+%--------------------------------------------------------------%
+%  EXAMPLE INTERLINEAR GLOSS, ADAPTED FROM LEV'S DISSERTATION  
+%															   
+%	\begin{example}											   
+%	\label{ex:nasalpoa}										   
+%		Ontagake. \textipa{[ontagakse]}						   
+%		\gll o= n- tag -ak -e 								   
+%		3nmS= irreal burn -perf -irreal.i 					   
+%		\glt `It will burn.' 								   
+%		\glend 												   
+%	\end{example} 											   
+%  															   
+%	%Reference examples like this: (\ref{ex:nasalpoa})         
+%--------------------------------------------------------------%
+
+%This is a test\footnote{This is not a test; it's an example of a footnote.}
+
+\begin{document}
+\title{\kurango scratch board: put in FLEx later}
+\maketitle
+
+	\begin{example}
+	\label{ex:redup_emphasis}
+		I'i, ni'o'atimi wasinga. Na'o'atimimi wasi! [\textipa{ji njoPatimi VasiNa naPoPatimimi Vasi}]
+		\gll i\glot i ni- \glot o\glot ati -mi \W a- si -\N a na- \glot o\glot ati -mimi \W a- si
+		no 2- dog {-\poss} that- {\cop} {-\negative} 1- dog -{\D{int.poss}} that- {\cop}
+		\glt `No, that is not your dog. That is \emph{my} dog!''
+		\glend
+	\end{example}
+
+
+\end{document}
+

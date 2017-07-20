@@ -1,0 +1,87 @@
+\documentclass[12pt]{article}
+	%FORMATTING
+		\usepackage{graphicx} %op shit
+		\usepackage[margin=1in]{geometry} %Set margins
+		\usepackage{fixltx2e} %subscript
+	%LINGUISTICS-RELATED PACKAGES
+		\usepackage{qtree} %syntax trees
+		\usepackage{covington} %interlinearizations
+		\usepackage{amsmath,amsthm,amssymb} %empty set and some other shit
+		\usepackage{tipa} %ipa
+		\usepackage{float} %resizing tables
+
+	\let\oldemptyset\emptyset %Redefines the shitty empty set symbol to the old one.
+	\let\emptyset\varnothing
+
+	%stuff for handling how awful it is to use default tipa syntax
+		\newcommand{\R}{\textipa{R}} %alv tap
+		\newcommand{\N}{\textipa{N}} %eng
+		\newcommand{\OO}{\textipa{O}} %open o, DONT FORGET THE SECOND O!!!
+		\newcommand{\B}{\textipa{B}} %bilab fric voi
+		\newcommand{\G}{\textipa{G}} %velar fric voi
+		\newcommand{\W}{\textipa{V}} %bilab approximant
+		\newcommand{\F}{\textipa{F}} %-voi bilab fric
+		\newcommand{\M}{\textturnmrleg} %velar approx
+		\newcommand{\glot}{\textipa{P}}
+		%\textipa{:}
+
+		\newcommand{\0}{$\emptyset$} %Null
+		\newcommand{\D}{\scshape} %smallcaps
+
+		\newcommand{\kurango}{K\textipa{uRaNO}}
+		\newcommand{\nom}{\D{nom}}
+		\newcommand{\erg}{\D{erg}}
+		\newcommand{\abs}{\D{abs}}
+		\newcommand{\gen}{\D{gen}}
+		\newcommand{\poss}{\D{poss}}
+		\newcommand{\emo}{\D{emo}}
+		\newcommand{\cop}{\D{cop}}
+		\newcommand{\caus}{\D{caus}}
+		\newcommand{\pst}{\D{pst}}
+		\newcommand{\fut}{\D{fut}}
+		\newcommand{\negative}{\D{neg}}
+		\newcommand{\interr}{\D{interr}}
+		\newcommand{\reas}{\D{reas}}
+		\newcommand{\dirprox}{\D{dir:prox}}
+
+%--------------------------------------------------------------%
+%  EXAMPLE INTERLINEAR GLOSS, ADAPTED FROM LEV'S DISSERTATION  
+%															   
+%	\begin{example}											   
+%	\label{ex:nasalpoa}										   
+%		Ontagake. \textipa{[ontagakse]}						   
+%		\gll o= n- tag -ak -e 								   
+%		3nmS= irreal burn -perf -irreal.i 					   
+%		\glt `It will burn.' 								   
+%		\glend 												   
+%	\end{example} 											   
+%  															   
+%	%Reference examples like this: (\ref{ex:nasalpoa})         
+%--------------------------------------------------------------%
+
+%This is a test\footnote{This is not a test; it's an example of a footnote.}
+
+\begin{document}
+\title{The Phonological Rules of \kurango}
+\maketitle
+
+\section{Glide formation}
+Syllables ending in /i/ followed by syllables starting in /\glot/ undergo glide formation. The glottal stop is deleted, and the /i/ becomes [j] ([\M] in some dialects). This dictates two crucially ordered phonological rules.
+	
+	\begin{enumerate}
+	\centering
+		\item %Glottal stop deletion
+			 /\glot/ $\longrightarrow [\emptyset] 
+			 /
+			 \left[\begin{array}{l} -\text{cons}\\+\text{front}\\+\text{high}\\+\text{syl} \end{array}\right]$ \rule[-10pt]{20pt}{1pt} $\left[\begin{array}{l} -\text{cons}\\+\text{syl} \end{array}\right]$ \\ \emph{Glottal stop deletion}
+		\item %Glide formation
+			$\left[\begin{array}{l} -\text{cons}\\+\text{front}\\+\text{high}\\+\text{syl} \end{array}\right] \longrightarrow \left[\begin{array}{l} -\text{syl} \end{array}\right]$ / \rule[-10pt]{20pt}{1pt} $\left[\begin{array}{l} -\text{cons}\\+\text{syl} \end{array}\right]$ \\ \emph{Glide formation}
+ 	\end{enumerate}
+
+ It should be noted that this process does not occur across word boundaries.
+
+
+
+
+\end{document}
+

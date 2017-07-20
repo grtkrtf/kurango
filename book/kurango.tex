@@ -1,0 +1,112 @@
+\documentclass[oneside]{book}
+
+	%FORMATTING
+	 	\usepackage{graphicx} %op shit
+	 	\usepackage[margin=1in]{geometry} %Set margins
+	 	\usepackage{fixltx2e} %subscript
+	 	\usepackage{multicol} % multiple columns
+	 	\usepackage[toc]{appendix} % Allows appendices
+	 	\usepackage{float}
+	 	\usepackage{textcomp}
+	 	\usepackage{CJKutf8} %japanese support
+	 	\usepackage{hyperref} % urls, chapter ref
+	 	\usepackage{footnote}
+	 	\usepackage{makecell}
+	 		\makesavenoteenv{tabular}
+	%LINGUISTICS-RELATED PACKAGES
+	 	\usepackage{qtree} %syntax trees
+	 	\usepackage{covington} %interlinearizations
+	 	\usepackage{amsmath,amsthm,amssymb} %empty set and some other shit
+	 	\usepackage{tipa} %ipa
+	 	\usepackage{vowel}
+
+	 \let\oldemptyset\emptyset %Redefines the shitty empty set symbol to the old one.
+	 \let\emptyset\varnothing
+
+	 \newcommand{\entry}[4]{\markboth{}{}\textbf{#1}\ {[#2]}\ \textit{#3}\ $\diamond$\ {#4}}  % dictionary command
+
+	 \newcommand{\uline}{\rule[-5pt]{20pt}{1pt}} % line for phon rules
+
+	 %stuff for handling how awful it is to use default tipa syntax
+	 	\newcommand{\R}{\textipa{R}} %alv tap
+	 	\newcommand{\N}{\textipa{N}} %eng
+	 	\newcommand{\OO}{\textipa{O}} %open o, DONT FORGET THE SECOND O!!!
+	 	\newcommand{\B}{\textipa{B}} %bilab fric voi
+	 	\newcommand{\G}{\textipa{G}} %velar fric voi
+	 	\newcommand{\W}{\textipa{V}} %bilab approximant
+	 	\newcommand{\F}{\textipa{F}} %-voi bilab fric
+	 	\newcommand{\M}{\textturnmrleg} %velar approx
+	 	\newcommand{\glot}{\textipa{P}}
+	 	\newcommand{\len}{\textipa{:}} % long vowels and shit
+
+		\newcommand{\tie}[2]{\textipa{\t{#1#2}}} % tie bars
+
+	 	\newcommand{\0}{$\emptyset$} %Null
+	 	\newcommand{\D}{\scshape} %smallcaps
+	 	\newcommand{\stress}{\textquotesingle}
+
+	 	\newcommand{\kurango}{K\textipa{uRaNO}}
+	 	\newcommand{\nom}{\D{nom}}
+	 	\newcommand{\erg}{\D{erg}}
+	 	\newcommand{\abs}{\D{abs}}
+	 	\newcommand{\gen}{\D{gen}}
+	 	\newcommand{\poss}{\D{poss}}
+	 	\newcommand{\emo}{\D{emo}}
+	 	\newcommand{\cop}{\D{cop}}
+	 	\newcommand{\caus}{\D{caus}}
+	 	\newcommand{\pst}{\D{pst}}
+	 	\newcommand{\fut}{\D{fut}}
+	 	\newcommand{\negative}{\D{neg}}
+	 	\newcommand{\interr}{\D{interr}}
+	 	\newcommand{\reas}{\D{reas}}
+	 	\newcommand{\dirprox}{\D{dir:prox}}
+	 	\newcommand{\pl}{\D{pl}}
+	 	\newcommand{\redupl}{\D{redup.pl}}
+
+	 	\newcommand{\tild}{{\raise.17ex\hbox{$\scriptstyle\sim$}}} % tilde
+
+	% Commands for dealing with custom fonts
+	% http://math.stanford.edu/~jyzhao/latexfonts.php
+	% http://xpt.sourceforge.net/techdocs/language/latex/latex33-LaTeXAndTrueTypeFont/ar01s03.html
+		\newcommand\customfont[1]{{\usefont{T1}{custom}{m}{n} #1 }}
+
+%--------------------------------------------------------------%
+%  EXAMPLE INTERLINEAR GLOSS, ADAPTED FROM LEV'S DISSERTATION  
+%															   
+%	\begin{example}											   
+%	\label{ex:nasalpoa}										   
+%		Ontagake. \textipa{[ontagakse]}						   
+%		\gll o= n- tag -ak -e 								   
+%		3nmS= irreal burn -perf -irreal.i 					   
+%		\glt `It will burn.' 								   
+%		\glend 												   
+%	\end{example} 											   
+%  															   
+%	%Reference examples like this: (\ref{ex:nasalpoa})         
+%--------------------------------------------------------------%
+
+\begin{document}
+
+	\input{./tex/title.tex} % Title page
+	\input{./tex/todo.tex} % TO DO, DELETE THIS
+	\input{./tex/pre.tex} % acknowledgements/etc
+
+	\setcounter{tocdepth}{1}
+	\tableofcontents
+
+	\input{./tex/intro.tex} % introduction
+	\input{./tex/syntax.tex} % syntax chapter
+	\input{./tex/phonetics.tex} % phonetics
+	\input{./tex/phonology.tex} % phonology
+	\input{./tex/morph.tex} % morphology
+	\input{./tex/interlin.tex} % interlinearizations chapter
+	\input{./tex/orthog.tex}
+
+	\begin{appendices}
+		\input{./tex/dict.tex} % dict chapter
+		\input{./tex/phrasebook.tex} % kng phrasebook
+		\input{./tex/typeset.tex} % fonts
+		\input{./tex/qa.tex}
+	\end{appendices}
+
+\end{document}

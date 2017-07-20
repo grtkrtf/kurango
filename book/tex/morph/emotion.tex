@@ -1,0 +1,293 @@
+\section{Emotion expression}
+	One of the main goals of {\kurango} was to create a language in which expression of emotional states and cognitive processes was more flexible than English. For the most part, this was a goal inspired by Anna Wierzbicka's calls for use of a natural semantic metalanguage when discussing emotion, as languages tend to differ greatly in their emotion terminology. What {\kurango} brings is a hopefully language-neutral system based on permutable morphemes.
+
+	This design goal is reflected in an Ithkuilian way through the use of an unnatural system of suffixal morphology in that it requires speakers to really think about what exactly they want to say. However, many common emotions have lexicalized compounds to serve as everyday adjectives.
+
+	\subsection{The emotion marker \emph{ga}} % Is ga really an adjective?
+		\emph{ga} is an adjective which indicates a state of emotional being. By itself, it glosses to ``emotional'', but \emph{gaa} glosses to ``emotion.as.an.abstract.concept'' through a productive vowel lengthening rule. \emph{ga} has its own system of suffixation that allows many changes to its meaning.
+
+			\subsubsection{Morphosyntax of \emph{ga} constructions}
+				The adjective \emph{ga} has five slots upon which morphology can affix.
+
+					\begin{table}[H]
+					\centering
+					\label{ga_morphosyntax}
+						\begin{tabular}{cccccc}
+						Root & Slot 1 & Slot 2 & Slot 3 & Slot 4 & Slot 5 \\ \hline\hline
+						ga & -NEG & -PRIM/-NEUT & -EMO & -TARG & -DUR \\ \hline
+						\end{tabular}
+						\caption{Morphosyntax of \emph{ga}}
+					\end{table}
+
+				\begin{itemize}
+					\item ``NEG'' negates all following morphology.
+					\item ``PRIM/NEUT'' are two derivational modifiers for the following emotion: PRIM makes an emotion ``primal,'' while NEUT makes an emotion ``neutered.''
+					\item ``EMO'' is a category for indicating explicit emotional states.
+					\item ``TARG'' indicates the target of the emotion.
+					\item ``DUR'' indicates the duration of the previous emotion.
+				\end{itemize}
+
+				When expressing a specific emotion (that is, not the concept of ``emotion'' in general), only EMO is mandatory. The other three slots can be omitted without affecting grammaticality, but may be included for distinguishing between more precise differences between emotions.
+
+	\subsection{NEG, PRIM, and NEUT: derivational suffixes}
+		\subsubsection{NEG}
+			The NEG slot can only be occupied by one suffix, \emph{-\N a}. \emph{-\N a} negates the emotional construction that follows it.
+
+			\begin{figure}[H] % Interlineraization examples go here.
+			\label{interlin_emo_neg}
+
+				\begin{example}
+				\label{ex:interlin_emo_neg_1}
+					Ganga si. [\stress ga.\N a.si]
+					\gll ga -\N a si
+					emotional -{\negative} \cop
+					\glt `Things are not going well.'
+					\glend
+				\end{example}
+
+				\begin{example}
+				\label{ex:interlin_emo_neg_2}
+					Gangatixupa si. [ga.\stress\N a.ti.xu.pa.si]
+					\gll ga -\N a -ti -xu -pa si
+					emotional -{\negative} -\D{emo:affection} -\D{targ:anim} -\D{dur:short} \cop
+					\glt `I am angry at someone.'
+					\glend
+				\end{example}
+
+			\caption{Examples of \emph{ganga} constructions}
+			\end{figure}
+
+		\subsubsection{PRIM}
+			The PRIM suffix, -\emph{p\OO}, makes an emotion ``primal.'' This is important for making distinctions between emotions like love and lust, happiness and pleasure, anger and rage, etc.
+
+			\begin{figure}[H] % Interlineraization examples go here.
+			\label{interlin_emo_prim}
+
+				\begin{example}
+				\label{ex:interlin_emo_prim_1}
+					Gapowa si. [ga.\stress p\OO.\W a.si]
+					\gll ga -{p\OO} -\W a si
+					emotional -\D{prim} -\D{emo:confidence} \cop
+					\glt `I'm feeling courageous.'
+					\glend
+				\end{example}
+
+				\begin{example}
+				\label{ex:interlin_emo_prim_2}
+					Gapotitifu si. [ga.\stress p\OO.ti.ti.fu si]
+					\gll ga -{p\OO} -titi -\F u si
+					emotional -\D{prim} -\D{emo:strong.affection} -\D{targ:null} \cop
+					\glt `I'm horny.'
+					\glend
+				\end{example}
+
+			\caption{Examples of \emph{gapo} constructions}
+			\end{figure}
+
+		\subsubsection{NEUT}
+			The NEUT suffix, -\emph{n\OO\glot i}, makes an emotion neutered. This can either reflect a decrease in intensity, or a lack of any intensity in the cases of apathy, ambivalence, etc. Pragmatically, -\emph{n\OO\glot i} is combined with anger to denote passive-aggressiveness.
+
+			\begin{figure}[H] % Interlineraization examples go here.
+			\label{interlin_emo_neut}
+
+				\begin{example}
+				\label{ex:interlin_emo_neut_1}
+					Gano'i si. [ga.\stress n\OO.ji.si]
+					\gll ga -n\OO\glot i si
+					emotional -\D{neut} \cop
+					\glt `I'm alright, I guess.' (read in voice of whiny teenager)
+					\glend
+				\end{example}
+
+				\begin{example}
+				\label{ex:interlin_emo_neut_2}
+					Gangano'itixu si [ga.\stress\N a.n\OO.ji.ti.xu.si]
+					\gll ga -\N a -n\OO\glot i -ti -xu si
+					emotional -\D{neg} -\D{neut} -\D{emo:affection} -\D{targ:anim} \cop
+					\glt `It's OK. I'm fine.' (In reality, I am mad at you)
+					\glend
+				\end{example}
+
+			\caption{Examples of \emph{gano'i} constructions}
+			\end{figure}
+
+	\subsection{EMO, TARG, and DUR: inflectional suffixes}
+		\subsubsection{EMO}
+			EMO suffixes indicate explicit emotional states. Their distinctions are based upon Paul Ekman's theories of basic emotions, but additional suffixes have been added to his proposed basic emotions:
+				\begin{itemize}
+					\item -\emph{ka} indicates happiness or content.
+					\item -\emph{ti} indicates affection.
+					\item -\emph{\W u} indicates confidence. It is commonly negated to express fear or fright (depending on duration).
+					\item -\emph{t\OO} indicates excitement. It is negated to express dissapointment.
+					\item -\emph{xa} indicates a sense of pride/accomplishment. It is negated to express guilt, shame, and regret, depending on duration and target. Changes in duration can mean immediate or longstanding satisfaction.
+				\end{itemize}
+
+				\begin{figure}[H] % Interlineraization examples go here.
+				\label{interlin_emo}
+
+					\begin{example}
+					\label{ex:interlin_emo_1}
+						Gaka si. [\stress ga.ka.si]
+						\gll ga -ka si
+						emotional -\D{emo:content} \cop
+						\glt `Things are going well.'
+						\glend
+					\end{example}
+
+					\begin{example}
+					\label{ex:interlin_emo_2}
+						Gangatitixu si! [ga.\stress\N a.ti.ti.xu.si]
+						\gll ga -\N a -titi -xu si
+						emotional -{\negative} -\D{emo:strong.affection} -\D{targ:anim} \cop
+						\glt `I am repulsed (by someone)!'
+						\glend
+					\end{example}
+
+					\begin{example}
+					\label{ex:interlin_emo_3}
+						Gangawufuda si. [ga.\stress\N a.\W u.\F u.da.si]
+						\gll ga -\N a -\W u -\F u -da si
+						emotional -{\negative} -\D{emo:confidence} -\D{targ:null} -\D{dur.long} \cop
+						\glt `I am anxious.'
+						\glend
+					\end{example}
+
+					\begin{example}
+					\label{ex:interlin_emo_4}
+						Gatopa si [ga.\stress t\OO.pa.si]
+						\gll ga -{t\OO} -pa si
+						emotional -\D{emo:excitement} -\D{dur:short} \cop
+						\glt `I am surprised.'
+						\glend
+					\end{example}
+
+					\begin{example}
+					\label{ex:interlin_emo_5}
+						Gaxamuda si [ga.\stress xa.mu.da.si]
+						\gll ga -xa -mu -da si
+						emotional -\D{emo:pride} -\D{targ:refl} -\D{dur:long} \cop
+						\glt `I am proud of myself.'
+						\glend
+					\end{example}
+				\caption{Examples of emotional constructions using different EMO suffixes}
+				\end{figure}
+
+					\begin{table}[H]
+			\centering
+			\caption{Loose English equivalents of {\kurango} emotion adjectives}
+			\label{emo_permutation}
+				\begin{tabular}{c|cccc}
+				 & + & +\D{prim} & - & -\D{prim} \\ \hline\hline
+				 \emph{-ka} & 
+					 \makecell{\includegraphics[scale=0.25]{././img/gaka.png}\\happiness\\contentedness} & 
+					 \makecell{\includegraphics[scale=0.25]{././img/gapoka.png}\\pleasure\\(not nec. sexual)} & 
+					 \makecell{\includegraphics[scale=0.25]{././img/gangaka.png}\\unhappiness\\discontent\\sadness, anger(strong)} & 
+					 \makecell{\includegraphics[scale=0.25]{././img/gangapoka.png}\\pain\\displeasure} \\
+				 \emph{-ti} & 
+					 \makecell{\includegraphics[scale=0.25]{././img/gati.png}\\affection\\(often romantic)} & 
+					 \makecell{\includegraphics[scale=0.25]{././img/gapoti.png}\\lust\\wanting, craving} &
+					 \makecell{\includegraphics[scale=0.25]{././img/gangati.png}\\disdain\\detest(stronger)} &
+					  \makecell{\includegraphics[scale=0.25]{././img/gangapoti.png}\\repulsion\\disgust} \\
+				 \emph{-\W u} & 
+					 \makecell{\includegraphics[scale=0.25]{././img/gawu.png}\\confidence} &
+					 \makecell{\includegraphics[scale=0.25]{././img/gapowu.png}\\courage} &
+					 \makecell{\includegraphics[scale=0.25]{././img/gangawu.png}\\doubt\\anxiety} &
+					 \makecell{\includegraphics[scale=0.25]{././img/gangapowu.png}\\fear} \\
+				 \emph{-t\OO} &
+					 \makecell{\includegraphics[scale=0.25]{././img/gato.png}\\excitement} &
+					 \makecell{\includegraphics[scale=0.25]{././img/gapoto.png}\\arousal} &
+					 \makecell{\includegraphics[scale=0.25]{././img/gangato.png}\\dissapointment} &
+					 \makecell{\includegraphics[scale=0.25]{././img/gangapoto.png}\\helplessness}\\
+				 \emph{-xa} &
+					 \makecell{\includegraphics[scale=0.25]{././img/gaxa.png}\\pride} &
+					 \makecell{\includegraphics[scale=0.25]{././img/gapoxa.png}\\acceptance\\self of belonging} &
+					 \makecell{\includegraphics[scale=0.25]{././img/gangaxa.png}\\shame} &
+					 \makecell{\includegraphics[scale=0.25]{././img/gangapoxa.png}\\reclusiveness\\lack of belonging} \\ \hline
+				\end{tabular}
+			\end{table}
+
+		\subsubsection{TARG}
+			The TARG suffixes indicate the target of the emotion. There are four possibilities for this morphosyntactic category:
+				\begin{itemize}
+					\item -\emph{xu} represents an animate target. This can be a person or an animal (anything with consciousness).
+					\item -\emph{\F u} represents no target. It is also the inanimate suffix for a lot of constructions, and it can serve that purpose here too (eg: mad at your washing machine), but an inanimate pronoun usually follows to provide context in an ambiguous environment.
+					\item -\emph{mu} is a reflexive target.
+					\item -\emph{\R u} is a reciprocal target.
+				\end{itemize}
+
+			\begin{figure}[H] % Interlineraization examples go here.
+			\label{interlin_emo_targ}
+
+				\begin{example}
+				\label{ex:interlin_emo_targ_1}
+					Gakaxu si. [ga.\stress ka.xu.si]
+					\gll ga -ka -xu si
+					emotional -\D{emo:content} -\D{targ:anim} \cop
+					\glt `I am content (with someone).'
+					\glend
+				\end{example}
+
+				\begin{example}
+				\label{ex:interlin_emo_targ_2}
+					Gakafu si. [ga.\stress ka.\F u.si]
+					\gll ga -ka -\F u si
+					emotional -\D{emo:content} -\D{targ:null} \cop
+					\glt `I am content.'
+					\glend
+				\end{example}
+
+				\begin{example}
+				\label{ex:interlin_emo_targ_3}
+					Gakamu si. [ga.\stress ka.mu.si]
+					\gll ga -ka -mu si
+					emotional -\D{emo:content} -\D{targ:refl} \cop
+					\glt `I am content (with myself).'
+					\glend
+				\end{example}
+
+				\begin{example}
+				\label{ex:interlin_emo_targ_4}
+					Gakaru si. [ga.\stress ka.\R u.si]
+					\gll ga -ka -\R u si
+					emotional -\D{emo:content} -\D{targ:recip} \cop
+					\glt `I am am in a state of mutual content with another person.' % Is there a better way to gloss this? lol...
+					\glend
+				\end{example}
+			\caption{Examples of emotional constructions using different TARG suffixes}
+			\end{figure}
+
+		\subsubsection{DUR}
+			DUR suffixes are often omitted in common conversation, and used primarily to parse apart the subtle differences between discrete emotions.
+				\begin{itemize}
+					\item The long durative -\emph{da} indicates that the emotion occurred for a long period of time, something like the distinction between an emotion and a mood.
+					\item The short durative -\emph{pa}, on the other hand, marks the emotion as a fleeting state.
+				\end{itemize}
+
+			\begin{figure}[H] % Interlineraization examples go here.
+			\label{interlin_emo_dur}
+
+				\begin{example}
+				\label{ex:interlin_emo_dur_1}
+					Gatirupa si. [ga.\stress ti.\R u.pa.si]
+					\gll ga -ti -\R u -pa si
+					emotional -\D{emo:affection} -\D{targ:recip} -\D{dur:short} \cop
+					\glt `I am in love.' (fleeting)
+					\glend
+				\end{example}
+
+				\begin{example}
+				\label{ex:interlin_emo_dur_2}
+					Gatiruda si. [ga.\stress ti.\R u.da.si]
+					\gll ga -ti -\R u -da si
+					emotional -\D{emo:affection} -\D{targ:recip} -\D{dur:long} \cop
+					\glt `I am in love.' (longstanding)
+					\glend
+				\end{example}
+
+			\caption{Examples of emotional constructions using different DUR suffixes}
+			\end{figure}
+
+	\subsection{Reduplication}
+		Like other morphological categories in {\kurango}, EMO, DUR, TARG, PRIM, NEUT, and NEG can be reduplicated in order to modify intensity. It is interesting to note that reduplicating the PRIM suffix creates the lexicalized expression akin to the word ``fuck'' in English in terms of distribution and meaning. Etymologically, this comes from expressions like (\ref{ex:interlin_emo_prim_2}), which is the most common usage of \emph{po}.
+
+

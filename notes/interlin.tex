@@ -1,0 +1,192 @@
+\documentclass[12pt]{article}
+	%FORMATTING
+		\usepackage{graphicx} %op shit
+		\usepackage[margin=1in]{geometry} %Set margins
+		\usepackage{fixltx2e} %subscript
+	%LINGUISTICS-RELATED PACKAGES
+		\usepackage{qtree} %syntax trees
+		\usepackage{covington} %interlinearizations
+		\usepackage{amsmath,amsthm,amssymb} %empty set and some other shit
+		\usepackage{tipa} %ipa
+
+	\let\oldemptyset\emptyset %Redefines the shitty empty set symbol to the old one.
+	\let\emptyset\varnothing
+
+	%stuff for handling how awful it is to use default tipa syntax
+		\newcommand{\R}{\textipa{R}} %alv tap
+		\newcommand{\N}{\textipa{N}} %eng
+		\newcommand{\OO}{\textipa{O}} %open o, DONT FORGET THE SECOND O!!!
+		\newcommand{\B}{\textipa{B}} %bilab fric voi
+		\newcommand{\G}{\textipa{G}} %velar fric voi
+		\newcommand{\W}{\textturnmrleg} %velar approximant
+		%\textipa{:}
+
+		\newcommand{\0}{$\emptyset$} %Null
+		\newcommand{\D}{\scshape} %smallcaps
+
+		\newcommand{\kurango}{K\textipa{uRaNO}}
+		\newcommand{\nom}{\D{nom}}
+		\newcommand{\erg}{\D{erg}}
+		\newcommand{\abs}{\D{abs}}
+		\newcommand{\gen}{\D{gen}}
+		\newcommand{\poss}{\D{poss}}
+		\newcommand{\emo}{\D{emo}}
+		\newcommand{\cop}{\D{cop}}
+		\newcommand{\caus}{\D{caus}}
+		\newcommand{\pst}{\D{pst}}
+		\newcommand{\fut}{\D{fut}}
+
+%--------------------------------------------------------------%
+%  EXAMPLE INTERLINEAR GLOSS, ADAPTED FROM LEV'S DISSERTATION  
+%															   
+%	\begin{example}											   
+%	\label{ex:nasalpoa}										   
+%		Ontagake. \textipa{[ontagakse]}						   
+%		\gll o= n- tag -ak -e 								   
+%		3nmS= irreal burn -perf -irreal.i 					   
+%		\glt `It will burn.' 								   
+%		\glend 												   
+%	\end{example} 											   
+%  															   
+%	%Reference examples like this: (\ref{ex:nasalpoa})         
+%--------------------------------------------------------------%
+
+%This is a test\footnote{This is not a test; it's an example of a footnote.}
+
+\begin{document}
+\title{Example Ku\textipa{RaNO} sentences interlinearized}
+\maketitle
+
+	\section{Valence-increasing morphology}
+		\subsection{Applicatives}
+			Applicatives in {\kurango} are marked using a suffix on the introduced argument, -\textipa{P}uti.
+			\begin{example}
+			\label{ex:nonapplicative}
+				Nimotivagaana. \textipa{[nimOtiBaga:na]}
+				\gll ni- {\0-} m\OO ti -\B a -ga\textipa{:} -na -\0
+				2- {\erg-} die -{\D{caus}} -{\D{fut}} -1 -\abs
+				\glt `You are going to kill me.'
+				\glend
+			\end{example}
+
+			\begin{example}
+			\label{ex:applicative}
+				Nimotivagaana soodongu'uti. \textipa{[nigu naku mOtiBaga: sO:dONuPuti]}
+				\gll ni- {\0-} m\OO ti -\B a -ga\textipa{:} -na -\0 {s\OO\textipa{:}d\OO} -\N u -\textipa{P}uti
+				1- {\erg}- kill -{\caus} -{\fut} -1 -{\abs} sword {-\gen} -{\D{appl}}
+				\glt `You are going to kill me with a sword.' (lit: `You made me die with a sword.')
+				\glend
+			\end{example}
+
+		\subsection{Causatives}
+			Causatives in {\kurango} are marked using the verbal suffix -\B a.
+
+			\begin{example}
+			\label{ex:noncausative}
+				Nakumotigaa. \textipa{[nakumOtiga:]}
+				\gll na- ku- m\OO ti -ga\textipa{:}
+				{\D{1}}- {\D{nom}}- die -{\D{fut}}
+				\glt `I am going to die.'
+				\glend
+			\end{example}
+
+			\begin{example}
+			\label{ex:causative}
+				Namotivagaana. \textipa{[namOtiBaga:na]}
+				\gll na- {\0-} m\OO ti -\B a -ga\textipa{:} -na -\0
+				{\D{1}} {\D{erg}}- die -{\D{caus}} -{\D{fut}} -1 -\abs
+				\glt `I am going to kill myself.' (lit: `I am going to make myself die.')
+				\glend
+			\end{example}
+
+		If an agentive argument is not introduced with the causative suffix -\B a, the utterance is still grammatical, but it has a passivized 
+		%what should i call this??
+		 connotation to it.
+
+		 	\begin{example}
+		 	\label{ex:noncausative}
+		 		Nakumotivagaa. \textipa{[nakumOtiBaga:]}
+		 		\gll na- ku- m\OO ti -\B a -ga\textipa{:}
+		 		1- {\nom-} die {-\caus} {-\fut}
+		 		\glt `I am going to be killed' (lit: I am going to be made dead) %Is this future perfect or just future? wtf
+		 		\glend
+		 	\end{example}
+
+
+
+	\section{Valence-decreasing morphology}
+
+	\section{Directionals}
+
+	\section{Case assignment}
+		Ku\R a\N\OO 's case system can be described as ``fluid-S,'' in that arguments of intransitive verbs (S) pattern either with subjects of transitive verbs (S\textsubscript{A}) or objects of transitive verbs (S\textsubscript{O}). Determining the way in which S patterns has to do with the semantics of the utterance: S\textsubscript{A} (marked with {\D{nom}} on the Agent) has no entailment about the volition of the Agent in the action being performed, while S\textsubscript{O} (marked with {\D{erg}} on the Agent) entails that the agent was volitional in the action being performed.
+
+		\begin{example}
+		\label{ex:case_erg}
+			Nakari. [naka\R i]
+			\gll na- \0- ka\R i
+			{\D{1}}- {\D{erg}}- sleep
+			\glt `I sleep.' (by my own volition.)
+			\glend
+		\end{example}
+
+		\begin{example}
+		\label{ex:case_abs}
+			Nakukari. [nakuka\R i]
+			\gll na- ku- ka\R i
+			{\D{1}}- {\D{nom}}- sleep
+			\glt `I sleep.' (no entailment about my volition.)
+			\glend
+		\end{example}
+
+		\subsection{Case assignment in transitive sentences}
+			Case assignment of (lexically) transitive verbs is similar to that of English. Agents take {\D{nom}} case, and Themes(Objects) take {\D{acc}} case. In ditransitives, {\D{gen}} case is also used on the second Object(Instrument/Beneficiary/Recipient/etc), as in (\ref{ex:case_ditrans}).
+
+			\begin{example}
+			\label{ex:case_ditrans}
+				Nawivinu namiromiku nungu. \textipa{[na\W i\B inu nami\R\OO miku nu\N u]}
+				\gll na- \0- \W i\B i -nu {-\0} na- {mi\R\OO} -mi -ku nu -\N u
+				1- \erg- give -3 {-\abs} 1- cat {-\poss} {-\abs} 3 -\gen
+				%is case assignment in this sentence OK?
+				\glt `I give him/her my cat.'
+				\glend
+			\end{example}
+				%\begin{example}
+				%\label{ex:case_ditransitive}
+				%	Naku namiromirhu wivi nungu. \textipa{[naku nami\R\OO mi\G u \W i\B i nu\N u]}
+				%	\gll na -ku na- {mi\R\OO} -mi -\G u \W i\B i nu -\N u
+				%	1 -{\D{nom}} 1- cat -{\D{poss}} -{\D{acc}} give {\D{3}} -{\D{gen}}
+				%	\glt `I gave him/her my cat.'
+				%	\glend
+				%\end{example}
+
+			\subsubsection{Case assignment in causatives}
+				In a causative sentence, fluidity of S is preserved (as the verb is underlyingly intransitive), which once again has entailment for the Agent's volition in the action being performed. {\D{erg}} case-marking on the Agent entails that the agent is volitional in the action being performed (as in (\ref{ex:fluids_erg})). {\D{nom}} case-marking has no implication about the agent's volition in the action being performed (as in (\ref{ex:fluids_abs})). 
+				%Case-marking on the Theme and Instrument also vary based on how the Agent's case is marked.
+					%OR
+				%Themes always take \D{acc} case-marking and Instruments always take \D{gen} case-marking, regardless of how case is marked on the Agent.
+					%WHICH OF THESE IS TRUE LOL
+
+				\begin{example}											   
+				\label{ex:fluids_erg}										   
+						Gangaka nasivamonu. \textipa{[gaNaka nasiBamOnu]}
+						\gll ga -\N a -ka na- \0- si -\B a {-m\OO} -nu -\0						   
+			   			{\emo} -{\D{neg}} -{\D{emo:happy}} 1- {\erg-} {\cop} {-\caus} {-\pst} 3 -\abs
+						\glt `I made him/her unhappy.' (It is my fault that he/she was unhappy.) 								   
+						\glend 												   
+				\end{example}
+
+				\begin{example}
+				\label{ex:fluids_abs}
+						Gangaka nakusivamonu. \textipa{[gaNaka nakusiBamOnu]}
+						\gll ga -\N a -ka na- ku- si -\B a {-m\OO} -nu -\0				   
+			   			{\emo} -{\D{neg}} -{\D{emo:happy}} 1- {\nom}- {\cop} {-\caus} {-\pst} 3 -\abs
+						\glt `I made him/her unhappy.' (No implication that it was my fault.)
+						\glend
+				\end{example}
+
+			\subsubsection{Negation and case assignment in causative verbs: semantic implications}
+				%What is actually being negated??? help
+
+\end{document}
+
